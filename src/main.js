@@ -6,7 +6,7 @@ const animator = new (require('./Animator'))();
 const communication = new (require('./Communication'))();
 
 if(!config.DRY_RUN) {
-  const i2CManager = (require('./I2CManager'))();
+  const i2CManager = new (require('./I2CManager'))();
 
   i2CManager.on('ready', function() {
     communication.on('sendCommand', function(cmd) {
