@@ -21,20 +21,31 @@ class Animator {
       this.isPlaying = true;
     }
 
-    (function() {
-      const animation = self.animations.shift();
-      if(animation) {
-        console.log(`${animation.test} for ${animation.duration} milliseconds`);
+    const animation = self.animations.shift();
+    if(animation) {
+      console.log(`${animation.test} for ${animation.duration} milliseconds`);
 
-        self.timer = setTimeout(function() {
-          if(self.animations.length) {
+      self.timer = setTimeout(function() {
+        if(self.animations.length) {
+          if(self.isPlaying) {
             self.play();
-          } else {
-            self.isPlaying = false;
           }
-        }, animation.duration);
-      }
-    })();
+        } else {
+          self.isPlaying = false;
+          self.timer = null;
+        }
+      }, animation.duration);
+    }
+  }
+
+  stop() {
+    this.isPlaying = false;
+  }
+
+  empty() {
+    this.animations.clear();
+    this.isPlaying = false;
+    this.timer = null;
   }
 }
 
