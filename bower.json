@@ -1,0 +1,27 @@
+{
+  "name": "i-love-chips-16",
+  "main": "src/main.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/LgHS/i-love-chips-16.git",
+  "authors": [
+    "john <john@lghs.be>",
+    "edwin <edwin@3kd.be>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "bootstrap": "~3.2.0",
+    "font-awesome": "~4.2.0"
+  }
+}

@@ -1,11 +1,9 @@
 'use strict';
 
-const I2CManager = require('./I2CManager');
-
 class Animator {
   constructor() {
       this.animations = [];
-      this.timer;
+      this.timer = null;
       this.isPlaying = false;
   }
 

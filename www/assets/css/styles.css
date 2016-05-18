@@ -1,0 +1,26 @@
+body > header {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+
+
+.blink {
+    animation: blink-animation 2s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
