@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thermal Printer server</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <h1>NERVOUS BREAKDOWN</h1>
+    </header>
+
+    <main class="container">
+        Hello world
+        <form id="send-command-form" action="#">
+            <input type="text" id="send-motor-input" />
+            <input type="text" id="send-angle-input" />
+            <button type="submit">A'IGHT !</button>
+        </form>
+    </main>
+
+    <script type="text/javascript" src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://localhost:8081/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="assets/js/communication.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

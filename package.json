@@ -4,9 +4,35 @@
   "description": "We want to crush as much chips as we can.",
   "main": "src/main.js",
   "scripts": {
-    "start": "node src/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "better-npm-run dev:server & better-npm-run dev:web-debug",
+    "dry": "better-npm-run dev:dry & better-npm-run dev:web-debug"
   },
+
+  "betterScripts": {
+    "dev:server": {
+      "command": "node src/main.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "dev:dry": {
+      "command": "node src/main.js",
+      "env": {
+        "NODE_ENV": "development",
+        "DRY_RUN": true
+      }
+    },
+    "dev:web-debug": {
+      "command": "./web-debug.sh"
+    },
+    "prod": {
+      "command": "node src/main.js",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LgHS/i-love-chips-16.git"
@@ -16,5 +42,16 @@
   "bugs": {
     "url": "https://github.com/LgHS/i-love-chips-16/issues"
   },
-  "homepage": "https://github.com/LgHS/i-love-chips-16#readme"
+  "homepage": "https://github.com/LgHS/i-love-chips-16#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "finalhandler": "^0.4.1",
+    "serve-index": "^1.7.3",
+    "serve-static": "^1.10.2",
+    "socket.io": "^1.4.6",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "better-npm-run": "0.0.8"
+  }
 }
