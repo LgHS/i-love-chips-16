@@ -43,7 +43,7 @@ class Animator {
   }
 
   empty() {
-    this.animations.clear();
+    this.animations = [];
     this.isPlaying = false;
     this.timer = null;
   }

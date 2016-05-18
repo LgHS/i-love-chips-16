@@ -14,7 +14,3 @@ animator.queue({
 });
 
 animator.play();
-
-setTimeout(function() {
-  animator.stop();
-}, 3500);
