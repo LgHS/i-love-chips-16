@@ -2,22 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Thermal Printer server</title>
+    <title>NERVOUS BREAKDOWN</title>
 
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <h1>NERVOUS BREAKDOWN</h1>
+        <h1 class="">NERVOUS <span class="blink">B</span>REAKDOWN</h1>
     </header>
 
     <main class="container">
-        Hello world
-        <form id="send-command-form" action="#">
-            <input type="text" id="send-motor-input" placeholder="motor" />
-            <input type="text" id="send-angle-input" placeholder="angle" />
-            <button type="submit">A'IGHT !</button>
+        <form id="send-command-form" action="#" class="form-inline text-center">
+            <div class="form-group">
+                <label for="send-motor-input">Motor #</label>
+                <input type="number" min="0" max="5" id="send-motor-input" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="send-angle-input">Angle °</label>
+                <input type="number" step="0.5" id="send-angle-input" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">A'IGHT !</button>
         </form>
     </main>
 

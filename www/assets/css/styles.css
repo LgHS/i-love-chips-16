@@ -1,5 +1,6 @@
 body > header {
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     text-align: center;
 }
 
@@ -7,68 +8,19 @@ header h1 {
     font-size: 60px;
 }
 
-.nav-tabs {
-    margin-bottom: 30px !important;
+
+
+.blink {
+    animation: blink-animation 2s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
-
-#simulation {
-    text-align: center;
-    margin-top: 100px;
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }
-
-
-.led {
-    display: inline-block;
-    border-radius: 100px;
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
-    border: solid 2px;
-}
-.led.turned-off {
-    background-color: transparent !important;
-}
-#green-led {
-    border-color: green;
-    background-color: green;
-}
-#red-led {
-    border-color: red;
-    background-color: red;
-}
-
-
-#image-upload-btn {
-    margin-bottom: 20px;
-}
-
-
-/** File input button **/
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-.btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
-}
-
-
-
-/** progress bars **/
-.progress .progress-bar {
-    transition: none;
-    -webkit-transition: none;
-    -o-transition: none;
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }
