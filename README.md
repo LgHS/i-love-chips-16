@@ -4,7 +4,7 @@
 
 * `npm install`
 * `bower install`
-* `npm dry` (Dry Run, without I2C)
+* `npm run dry` (Dry Run, without I2C)
 
 ## Running on Raspi
 
@@ -15,4 +15,4 @@ Raspi since build fails on OSX systems.
 * `sudo npm -g install bower`
 * `npm install i2c-bus pca9685`
 * `bower install`
-* `npm dev` (run with I2C)
+* `npm run dev` (run with I2C)
