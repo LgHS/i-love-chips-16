@@ -26,6 +26,10 @@ class Communication extends EventEmitter {
           motor: cmd.motor
         });
       });
+
+      socket.on('send-animation', function(json) {
+        self.emit('sendAnimation', json);
+      });
     });
   }
 }

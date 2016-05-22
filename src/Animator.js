@@ -12,7 +12,7 @@ class Animator {
     return this;
   }
 
-  play() {
+  play(callback) {
     const self = this;
 
     if(!this.isPlaying) {
@@ -21,12 +21,12 @@ class Animator {
 
     const animation = self.animations.shift();
     if(animation) {
-      console.log(`${animation.test} for ${animation.duration} milliseconds`);
+      if(callback) callback(animation);
 
       self.timer = setTimeout(function() {
         if(self.animations.length) {
           if(self.isPlaying) {
-            self.play();
+            self.play(callback);
           }
         } else {
           self.isPlaying = false;

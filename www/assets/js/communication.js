@@ -13,5 +13,16 @@
         angle: angle
       });
     });
+
+    $('#send-animation-form').on('submit', function(e) {
+      e.preventDefault();
+
+      var json = $.parseJSON($('#send-animation').val());
+
+      if(json) {
+        console.log('sending animation through socket', json);
+        socket.emit('send-animation', json);
+      }
+    });
   }
 }(jQuery));
